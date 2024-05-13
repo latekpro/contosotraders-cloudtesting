@@ -484,7 +484,7 @@ jobs:
             [
               {
                 "name": "domain",
-                "value": "${{ needs.provision.outputs.productsApiEndpoint }}"
+                "value": "contoso-traders-productseucs.eastus.cloudapp.azure.com"
               },
               {
                 "name": "protocol",
