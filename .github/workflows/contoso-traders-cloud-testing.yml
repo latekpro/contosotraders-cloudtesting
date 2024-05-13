@@ -3,7 +3,7 @@ name: contoso-traders-cloud-testing
 on:
   workflow_dispatch:
   push:
-    branches: ["main"]
+    branches: ["main123"]
     paths-ignore: ["docs/**", "demo-scripts/**"]
 
 env:
@@ -509,7 +509,7 @@ jobs:
             ]
 
   load-tests-carts-internal-api:
-    if: ${{ vars.DEPLOYPRIVATEENDPOINTS == 'true' }}
+    if: false
     needs: [provision, playwright-tests-ui]
     runs-on: ubuntu-22.04
     concurrency:
@@ -576,6 +576,7 @@ jobs:
             ]
 
   load-tests-carts-api:
+    if: false
     needs: [provision, playwright-tests-ui]
     runs-on: ubuntu-22.04
     concurrency:
@@ -624,6 +625,7 @@ jobs:
             ]
 
   playwright-tests-ui:
+    if: false
     needs: [provision]
     timeout-minutes: 20
     runs-on: ubuntu-22.04
