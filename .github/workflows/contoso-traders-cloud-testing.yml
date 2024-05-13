@@ -44,6 +44,7 @@ env:
 
 jobs:
   provision:
+    if: false
     runs-on: ubuntu-22.04
     env:
       AADUSERNAME: ${{ secrets.AADUSERNAME }}
@@ -449,7 +450,6 @@ jobs:
           inlineScript: echo UI CDN endpoint accessible at https://$(az keyvault secret show --vault-name ${{ env.KV_NAME }}${{ vars.SUFFIX }} --name uiCdnEndpoint --query value -o tsv)
 
   load-tests-with-chaos-products-api:
-    needs: [provision, playwright-tests-ui]
     runs-on: ubuntu-22.04
     concurrency:
       group: load-tests-with-chaos-products-api
