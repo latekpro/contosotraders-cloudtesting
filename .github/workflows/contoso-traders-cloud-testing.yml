@@ -496,15 +496,15 @@ jobs:
               },
               {
                 "name": "threads_per_engine",
-                "value": "5"
+                "value": "250"
               },
               {
                 "name": "ramp_up_time",
-                "value": "0"
+                "value": "60"
               },
               {
                 "name": "duration_in_sec",
-                "value": "120"
+                "value": "300"
               }
             ]
 
