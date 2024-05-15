@@ -44,7 +44,6 @@ env:
 
 jobs:
   provision:
-    if: false
     runs-on: ubuntu-22.04
     env:
       AADUSERNAME: ${{ secrets.AADUSERNAME }}
